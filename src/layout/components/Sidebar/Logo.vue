@@ -50,7 +50,7 @@ export default {
   width: 100%;
   height: 50px;
   line-height: 50px;
-  background: #439A97;
+  background: $menuBg;
   text-align: center;
   overflow: hidden;
 

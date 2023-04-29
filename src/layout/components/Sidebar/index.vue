@@ -74,3 +74,13 @@ export default {
   }
 }
 </script>
+
+<style
+  lang="scss"
+>
+.el-menu-item, .el-submenu__title {
+  border-radius: 25px;
+  margin: 4px 8px;
+  height: 50px;
+}
+</style>

@@ -10,8 +10,7 @@
 
     <i
       class="hamburger-container"
-      :class="{ 'el-icon-star-on': lockOpen, 'el-icon-star-off': !lockOpen}"
-      :style="{color: lockOpen ? '#CBEDD5' : '#97DECE'}"
+      :class="{ 'el-icon-lock': lockOpen, 'el-icon-unlock': !lockOpen}"
       @click="lockClick"
     />
 
@@ -100,7 +99,10 @@ export default {
   overflow: hidden;
   position: relative;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+  box-shadow: 0 2px 8px #CBEDD5;
+  margin-top: 16px;
+  margin-right: 8px;
+  border-radius: 10px;
 
   .hamburger-container {
     line-height: 46px;
@@ -110,7 +112,8 @@ export default {
     transition: background .3s;
     -webkit-tap-highlight-color: transparent;
     margin-left: 20px;
-    font-size: 30px;
+    font-size: 24px;
+    color: #439A97;
 
     &:hover {
       background: rgba(0, 0, 0, .025)
@@ -167,7 +170,7 @@ export default {
           cursor: pointer;
           position: absolute;
           right: -15px;
-          top: 25px;
+          top: 20px;
           font-size: 12px;
         }
       }
