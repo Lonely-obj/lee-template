@@ -20,9 +20,8 @@
         trigger="click"
       >
         <div class="avatar-wrapper">
-          <!--          <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">-->
           <img
-            src="~@/assets/images/login-bg.png"
+            :src="avatar+'?imageView2/1/w/80/h/80'"
             class="user-avatar"
           >
           <i class="el-icon-caret-bottom"/>
@@ -160,16 +159,15 @@ export default {
 
         .user-avatar {
           cursor: pointer;
-          width: 35px;
-          height: 25px;
-          margin-top: 10px;
-          border-radius: 10px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
         }
 
         .el-icon-caret-bottom {
           cursor: pointer;
           position: absolute;
-          right: -15px;
+          right: -20px;
           top: 20px;
           font-size: 12px;
         }

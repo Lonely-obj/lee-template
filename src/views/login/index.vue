@@ -76,14 +76,14 @@
         class="btn-class"
         :loading="loading"
         type="primary"
-        style="width:100%;margin-bottom:30px;"
+        style="width:100%;margin-bottom:24px;"
         @click.native.prevent="handleLogin"
       >Login
       </el-button>
 
       <div class="tips">
-        <span style="margin-right:20px;">账号: admin</span>
-        <span> 密码: any</span>
+        <span style="margin-right:20px;">账号: admin/editor/leeron</span>
+        <span> 密码: 任意6位数</span>
       </div>
 
     </el-form>
@@ -130,7 +130,7 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
+        username: 'leeron',
         password: '123456'
       },
       loginRules: {
@@ -271,7 +271,7 @@ $light_gray: #CBEDD5;
   }
 
   .tips {
-    font-size: 14px;
+    font-size: 12px;
     color: #CBEDD5;
     margin-bottom: 10px;
 

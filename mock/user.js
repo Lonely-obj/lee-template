@@ -13,20 +13,20 @@ const tokens = {
 const users = {
   'admin-token': {
     roles: ['admin'],
-    introduction: 'I am a super administrator',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    introduction: 'I am a super admin',
+    avatar: 'https://p.qqan.com/up/2022-9/16635499767793089.jpg',
     name: 'Super Admin'
   },
   'editor-token': {
     roles: ['editor'],
     introduction: 'I am an editor',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    avatar: 'https://img2.woyaogexing.com/2020/01/06/c9e72e15a20d4b86b0d9c849e3564c4d!400x400.webp',
     name: 'Normal Editor'
   },
   'leeron-token': {
     roles: ['leeron'],
     introduction: 'I am an leeron',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    avatar: 'https://p.qqan.com/up/2022-7/16590597636647215.jpg',
     name: 'Normal Leeron'
   }
 }
