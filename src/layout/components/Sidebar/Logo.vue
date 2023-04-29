@@ -1,36 +1,11 @@
 <template>
-  <div
-    class="sidebar-logo-container"
-    :class="{'collapse':collapse}"
-  >
+  <div class="sidebar-logo-container" :class="{'collapse':collapse}">
     <transition name="sidebarLogoFade">
-      <router-link
-        v-if="collapse"
-        key="collapse"
-        class="sidebar-logo-link"
-        to="/"
-      >
-        <img
-          v-if="logo"
-          :src="logo"
-          class="sidebar-logo"
-        >
-        <h1
-          v-else
-          class="sidebar-title"
-        >{{ title }} </h1>
+      <router-link v-if="collapse" key="collapse" class="sidebar-logo-link" to="/">
+        <img v-if="logo" :src="logo" class="sidebar-logo">
+        <h1 v-else class="sidebar-title">{{ title }} </h1>
       </router-link>
-      <router-link
-        v-else
-        key="expand"
-        class="sidebar-logo-link"
-        to="/"
-      >
-        <img
-          v-if="logo"
-          :src="logo"
-          class="sidebar-logo"
-        >
+      <router-link v-else key="expand" class="sidebar-logo-link" to="/">
         <h1 class="sidebar-title">{{ title }} </h1>
       </router-link>
     </transition>
@@ -48,7 +23,7 @@ export default {
   },
   data() {
     return {
-      title: 'Leeron Admin',
+      title: 'Lee Admin',
       logo: require('@/assets/images/login-bg.png')
     }
   }
@@ -59,6 +34,8 @@ export default {
   lang="scss"
   scoped
 >
+@import "~@/styles/variables.scss";
+
 .sidebarLogoFade-enter-active {
   transition: opacity 1.5s;
 }
@@ -73,7 +50,7 @@ export default {
   width: 100%;
   height: 50px;
   line-height: 50px;
-  background: #2b2f3a;
+  background: #439A97;
   text-align: center;
   overflow: hidden;
 
@@ -82,8 +59,8 @@ export default {
     width: 100%;
 
     & .sidebar-logo {
-      width: 32px;
-      height: 32px;
+      width: 50px;
+      height: 30px;
       vertical-align: middle;
       margin-right: 12px;
     }
@@ -91,11 +68,11 @@ export default {
     & .sidebar-title {
       display: inline-block;
       margin: 0;
-      color: #fff;
+      color: $menuActiveText;
       font-weight: 600;
       line-height: 50px;
-      font-size: 14px;
-      font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+      font-size: 36px;
+      font-family: Lobster, "Ink Free", Helvetica Neue, Arial, Helvetica, sans-serif;
       vertical-align: middle;
     }
   }

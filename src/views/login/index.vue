@@ -186,9 +186,9 @@ export default {
 /* Detail see https://github.com/PanJiaChen/vue-element-admin/pull/927 */
 
 $bg: #283443;
-$light_gray: #fff;
-$cursor: #fff;
-
+$light_gray: #CBEDD5;
+$cursor: #CBEDD5;
+@import "~@/styles/variables.scss";
 @supports (-webkit-mask: none) and (not (cater-color: $cursor)) {
   .login-container .el-input input {
     color: $cursor;
@@ -208,7 +208,7 @@ $cursor: #fff;
       -webkit-appearance: none;
       border-radius: 0px;
       padding: 12px 5px 12px 15px;
-      color: $light_gray;
+      color: $menuActiveText;
       height: 47px;
       caret-color: $cursor;
 
@@ -234,8 +234,8 @@ $cursor: #fff;
   scoped
 >
 $bg: #2d3a4b;
-$dark_gray: #889aa4;
-$light_gray: #eee;
+$dark_gray: #CBEDD5;
+$light_gray: #CBEDD5;
 
 #particles-js {
   background: url("~@/assets/images/dh.jpeg") no-repeat center center;
@@ -265,13 +265,14 @@ $light_gray: #eee;
 
     .btn-class {
       background: #022a3280;
+      color: #CBEDD5;
       border: none;
     }
   }
 
   .tips {
     font-size: 14px;
-    color: #fff;
+    color: #CBEDD5;
     margin-bottom: 10px;
 
     span {
