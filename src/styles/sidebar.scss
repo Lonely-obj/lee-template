@@ -11,7 +11,7 @@
     transition: width 0.28s;
     width: $sideBarWidth !important;
     background-color: $menuBg;
-    box-shadow: 0 2px 8px #CBEDD5;
+    box-shadow: 2px 2px 8px #CBEDD5;
     //height: 100%;
     position: fixed;
     font-size: 0px;
@@ -76,6 +76,7 @@
     .el-submenu__title {
       &:hover {
         background-color: $menuHover !important;
+        box-shadow: 4px 4px 3px 1px #CBEDD5;
       }
     }
 
@@ -88,10 +89,16 @@
       //min-width: $sideBarWidth !important;
       background-color: $subMenuBg !important;
       border-radius: 25px;
-      margin: 4px 8px;
+      margin: 8px;
 
       &:hover {
         background-color: $subMenuHover !important;
+        box-shadow: 4px 4px 3px 1px #CBEDD5;
+      }
+
+      &.is-active {
+        background-color: $subMenuHover !important;
+        box-shadow: 4px 4px 3px 1px #CBEDD5;
       }
     }
   }

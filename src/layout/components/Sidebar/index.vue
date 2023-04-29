@@ -78,9 +78,16 @@ export default {
 <style
   lang="scss"
 >
+@import "~@/styles/variables.scss";
+
 .el-menu-item, .el-submenu__title {
   border-radius: 25px;
-  margin: 4px 8px;
+  margin: 8px;
   height: 50px;
+
+  &.is-active {
+    background-color: $menuHover !important;
+    box-shadow: 4px 4px 3px 1px #CBEDD5;
+  }
 }
 </style>
