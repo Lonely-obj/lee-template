@@ -102,6 +102,7 @@ export default {
   margin-top: 16px;
   margin-right: 8px;
   border-radius: 10px;
+  border: 1px solid #CBEDD5;
 
   .hamburger-container {
     line-height: 46px;

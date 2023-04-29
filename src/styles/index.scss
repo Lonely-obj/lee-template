@@ -64,5 +64,16 @@ div:focus {
 .app-container {
   margin: 8px 8px 8px 0;
   border-radius: 10px;
-  border: none;
+  border: 1px solid #CBEDD5;
+  min-height: calc(100vh - 90px);
+  box-shadow: 4px 4px 3px 1px #CBEDD5;
+
+  .el-card__body {
+    padding: 16px;
+  }
+
+  .el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover {
+    background-color: #fff;
+    color: #94b89e;
+  }
 }

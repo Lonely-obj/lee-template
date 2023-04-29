@@ -1,6 +1,17 @@
 <template>
-  <el-card class="app-container" shadow="never">
-    <div class="dashboard-text">name: {{ name }}</div>
+  <el-card
+    class="app-container"
+    shadow="never"
+  >
+    <el-row :gutter="8">
+      <el-col :span="8">
+        <el-card>
+          <div class="dashboard-text">{{ name }}</div>
+        </el-card>
+      </el-col>
+      <el-col :span="8">1</el-col>
+      <el-col :span="8">2</el-col>
+    </el-row>
   </el-card>
 </template>
 
@@ -8,7 +19,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'Dashboard',
+  name: 'Home',
   computed: {
     ...mapGetters([
       'name'

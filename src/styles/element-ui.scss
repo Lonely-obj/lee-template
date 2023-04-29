@@ -49,15 +49,6 @@
   box-sizing: content-box;
 }
 
-.el-card {
-  box-shadow: 4px 4px 3px 1px #CBEDD5;
-  min-height: calc(100vh - 90px);
-}
-
-.el-card__body {
-  padding: 16px;
-}
-
 .el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover {
   background-color: #fff;
   color: #94b89e;
