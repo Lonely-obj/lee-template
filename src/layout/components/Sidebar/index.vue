@@ -1,6 +1,13 @@
 <template>
-  <div :class="{'has-logo':showLogo}">
-    <logo v-if="showLogo" :collapse="isCollapse" />
+  <div
+    :class="{'has-logo':showLogo}"
+    @mouseenter="toggleEnter"
+    @mouseleave="toggleLeave"
+  >
+    <logo
+      v-if="showLogo"
+      :collapse="isCollapse"
+    />
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
         :default-active="activeMenu"
@@ -12,7 +19,12 @@
         :collapse-transition="false"
         mode="vertical"
       >
-        <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
+        <sidebar-item
+          v-for="route in routes"
+          :key="route.path"
+          :item="route"
+          :base-path="route.path"
+        />
       </el-menu>
     </el-scrollbar>
   </div>
@@ -50,6 +62,14 @@ export default {
     },
     isCollapse() {
       return !this.sidebar.opened
+    }
+  },
+  methods: {
+    toggleEnter() {
+      this.$store.dispatch('app/toggleSideBar', true)
+    },
+    toggleLeave() {
+      this.$store.dispatch('app/toggleSideBar', false)
     }
   }
 }

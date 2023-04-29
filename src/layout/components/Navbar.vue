@@ -1,12 +1,19 @@
 <template>
   <div class="navbar">
-    <hamburger
-      :is-active="sidebar.opened"
-      class="hamburger-container"
-      @toggleClick="toggleSideBar"
-    />
+    <!--    <hamburger-->
+    <!--      :is-active="sidebar.opened"-->
+    <!--      class="hamburger-container"-->
+    <!--      @toggleClick="toggleSideBar"-->
+    <!--    />-->
 
     <!--    <breadcrumb class="breadcrumb-container"/>-->
+
+    <i
+      class="hamburger-container"
+      :class="{ 'el-icon-star-on': lockOpen, 'el-icon-star-off': !lockOpen}"
+      :style="{color: lockOpen ? '#CBEDD5' : '#97DECE'}"
+      @click="lockClick"
+    />
 
     <div class="right-menu">
       <el-dropdown
@@ -47,18 +54,23 @@
 <script>
 import { mapGetters } from 'vuex'
 // import Breadcrumb from '@/components/Breadcrumb'
-import Hamburger from '@/components/Hamburger'
+// import Hamburger from '@/components/Hamburger'
 
 export default {
   components: {
     // Breadcrumb,
-    Hamburger
+    // Hamburger
   },
   computed: {
     ...mapGetters([
       'sidebar',
       'avatar'
     ])
+  },
+  data() {
+    return {
+      lockOpen: false
+    }
   },
   methods: {
     toggleSideBar() {
@@ -67,6 +79,13 @@ export default {
     async logout() {
       await this.$store.dispatch('user/logout')
       this.$router.push(`/login?redirect=${this.$route.fullPath}`)
+    },
+    lockClick() {
+      this.lockOpen = !this.lockOpen
+      if (this.lockOpen === true) {
+        this.$store.dispatch('app/toggleSideBar', true)
+      }
+      this.$store.dispatch('app/lockSideBar', this.lockOpen)
     }
   }
 }
@@ -90,6 +109,8 @@ export default {
     cursor: pointer;
     transition: background .3s;
     -webkit-tap-highlight-color: transparent;
+    margin-left: 20px;
+    font-size: 30px;
 
     &:hover {
       background: rgba(0, 0, 0, .025)
