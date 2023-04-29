@@ -48,3 +48,12 @@
 .el-range-separator {
   box-sizing: content-box;
 }
+
+.el-card {
+  box-shadow: 4px 4px 3px 1px #CBEDD5;
+  min-height: calc(100vh - 90px);
+}
+
+.el-card__body {
+  padding: 16px;
+}

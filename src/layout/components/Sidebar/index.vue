@@ -81,7 +81,7 @@ export default {
 @import "~@/styles/variables.scss";
 
 .el-menu-item, .el-submenu__title {
-  border-radius: 25px;
+  border-radius: 10px;
   margin: 8px;
   height: 50px;
 

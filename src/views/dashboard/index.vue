@@ -1,7 +1,7 @@
 <template>
-  <div class="dashboard-container">
+  <el-card class="app-container" shadow="never">
     <div class="dashboard-text">name: {{ name }}</div>
-  </div>
+  </el-card>
 </template>
 
 <script>
@@ -17,11 +17,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style
+  lang="scss"
+  scoped
+>
 .dashboard {
   &-container {
     margin: 30px;
   }
+
   &-text {
     font-size: 30px;
     line-height: 46px;
