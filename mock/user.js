@@ -14,20 +14,20 @@ const users = {
   'admin-token': {
     roles: ['admin'],
     introduction: 'I am a super admin',
-    avatar: 'https://p.qqan.com/up/2022-9/16635499767793089.jpg',
-    name: '登录账号: Admin'
+    avatar: 'https://i04piccdn.sogoucdn.com/21037ba7288f5839',
+    name: 'Admin'
   },
   'editor-token': {
     roles: ['editor'],
     introduction: 'I am an editor',
-    avatar: 'https://img2.woyaogexing.com/2020/01/06/c9e72e15a20d4b86b0d9c849e3564c4d!400x400.webp',
-    name: '登录账号: Editor'
+    avatar: 'http://img.520touxiang.com/uploads/allimg/160727/3-160HG00003.gif',
+    name: 'Editor'
   },
   'leeron-token': {
     roles: ['leeron'],
     introduction: 'I am an leeron',
-    avatar: 'https://p.qqan.com/up/2022-7/16590597636647215.jpg',
-    name: '登录账号: Leeron'
+    avatar: 'https://i04piccdn.sogoucdn.com/6177f0d54a22ea16',
+    name: 'Leeron'
   }
 }
 

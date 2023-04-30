@@ -76,4 +76,10 @@ div:focus {
     background-color: #fff;
     color: #94b89e;
   }
+
+  .col-card-shadow {
+    border-radius: 10px;
+    border: 1px solid #CBEDD5;
+    box-shadow: 4px 4px 3px 1px #CBEDD5;
+  }
 }
