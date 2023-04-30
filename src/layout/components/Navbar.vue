@@ -7,7 +7,23 @@
     <!--    />-->
 
     <!--    <breadcrumb class="breadcrumb-container"/>-->
-
+    <vue-particles
+      color="#439A97"
+      :particleOpacity="0.7"
+      :particlesNumber="500"
+      shapeType="star"
+      :particleSize="6"
+      linesColor="#fff"
+      :linesWidth="0"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="3"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+    />
     <i
       class="hamburger-container"
       :class="{ 'el-icon-lock': lockOpen, 'el-icon-unlock': !lockOpen}"
@@ -93,6 +109,13 @@ export default {
   lang="scss"
   scoped
 >
+#particles-js {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .navbar {
   height: 50px;
   overflow: hidden;
@@ -114,6 +137,7 @@ export default {
     margin-left: 20px;
     font-size: 24px;
     color: #439A97;
+    position: relative;
 
     &:hover {
       background: rgba(0, 0, 0, .025)
